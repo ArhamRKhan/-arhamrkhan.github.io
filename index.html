@@ -5,16 +5,92 @@
   <title>Arham Khan | Data Analyst Portfolio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <style>
-    body { font-family: system-ui, sans-serif; background: #0f172a; color: #e5e7eb; margin: 0; }
-    header { text-align: center; padding: 2rem; background: #020617; border-bottom: 1px solid #1e293b; }
-    h1 { margin: 0; font-size: 2.2rem; }
-    h2 { border-bottom: 1px solid #1e293b; padding-bottom: 0.3rem; }
-    main { max-width: 900px; margin: auto; padding: 2rem; line-height: 1.6; }
-    a { color: #38bdf8; text-decoration: none; }
-    a:hover { text-decoration: underline; }
-    .project { margin-bottom: 1.7rem; }
-    .chips span { background: #1e293b; padding: 3px 10px; border-radius: 10px; margin-right: 5px; font-size: 0.75rem; }
-    footer { text-align: center; padding: 1rem; color: #94a3b8; border-top: 1px solid #1e293b; }
+    body {
+      font-family: system-ui, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #0f172a;
+      color: #e2e8f0;
+      line-height: 1.7;
+    }
+
+    /* Header */
+    header {
+      padding: 4rem 1rem;
+      text-align: center;
+      background: linear-gradient(135deg, #1e3a8a, #0f172a);
+      color: #f8fafc;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 3rem;
+    }
+    header p {
+      font-size: 1.2rem;
+      color: #cbd5e1;
+    }
+
+    /* Container */
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 2rem 1rem;
+    }
+
+    /* Section titles */
+    h2 {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+      border-bottom: 2px solid #1e293b;
+      padding-bottom: 0.4rem;
+    }
+
+    /* Project card */
+    .card {
+      background: #1e293b;
+      padding: 1.5rem;
+      border-radius: 12px;
+      margin-bottom: 1.8rem;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.35);
+    }
+    .card h3 {
+      margin-top: 0;
+      color: #38bdf8;
+    }
+
+    /* Chips */
+    .chips span {
+      background: #334155;
+      padding: 5px 12px;
+      border-radius: 20px;
+      margin-right: 8px;
+      font-size: 0.8rem;
+      display: inline-block;
+      margin-top: 6px;
+    }
+
+    a {
+      color: #38bdf8;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* Footer */
+    footer {
+      padding: 1.5rem;
+      text-align: center;
+      color: #94a3b8;
+      border-top: 1px solid #1e293b;
+      margin-top: 2rem;
+    }
+
   </style>
 </head>
 <body>
@@ -24,74 +100,73 @@
   <p>Aspiring Data Analyst · SQL · Python · Power BI</p>
 </header>
 
-<main>
+<div class="container">
 
-<section id="about">
-  <h2>About Me</h2>
-  <p>
-    I am a data enthusiast with an MSc in Information Technology from Leeds Beckett University.
-    I enjoy analysing and visualising data using SQL, Python, Pandas, and Power BI.
-    I am actively building projects in forecasting, churn analysis, machine learning
-    and preparing for a data analyst role in the UK.
-  </p>
-</section>
+  <!-- ABOUT -->
+  <section id="about">
+    <h2>About Me</h2>
+    <p>
+      I’m a data enthusiast with an MSc in Information Technology from Leeds Beckett University.
+      I specialize in analysing datasets, building predictive models, and generating insights using
+      SQL, Python, Power BI, and Machine Learning.  
+      Currently building a strong portfolio focused on real-world forecasting and analytics projects.
+    </p>
+  </section>
 
-<section id="projects">
-  <h2>Projects</h2>
+  <!-- PROJECTS -->
+  <section id="projects">
+    <h2>Projects</h2>
 
-  <div class="project">
-    <h3>📊 Telecom Churn Analysis</h3>
-    <ul>
-      <li>Performed EDA on customer behaviour and churn patterns.</li>
-      <li>Identified churn drivers (tenure, charges, contract type).</li>
-      <li>Built visualisations and predictive models (Logistic Regression / Random Forest).</li>
-    </ul>
-    <p><a href="#" target="_blank">GitHub Link (add later)</a></p>
-    <div class="chips"><span>Python</span><span>Pandas</span><span>Machine Learning</span></div>
-  </div>
+    <div class="card">
+      <h3>⛽ Crude Oil Price Forecasting (LSTM + Sentiment)</h3>
+      <p>
+        Advanced forecasting project combining multivariate market data and sentiment analysis.
+        Built as part of my MSc dissertation.
+      </p>
+      <ul>
+        <li>Used Brent, WTI, Gold, NASDAQ, DJI, and USD Index data.</li>
+        <li>Performed preprocessing, feature engineering & scaling.</li>
+        <li>Implemented multistep LSTM-based forecasting.</li>
+        <li>Added Twitter sentiment signals to improve prediction accuracy.</li>
+      </ul>
+      <p><a href="#" target="_blank">GitHub Link (coming soon)</a></p>
+      <div class="chips">
+        <span>Python</span>
+        <span>LSTM</span>
+        <span>Sentiment Analysis</span>
+        <span>Forecasting</span>
+        <span>Pandas</span>
+      </div>
+    </div>
 
-  <div class="project">
-    <h3>⛽ Crude Oil Price Forecasting (LSTM + Sentiment)</h3>
-    <ul>
-      <li>Combined Brent, WTI, Gold, DJI, NASDAQ & USD Index data.</li>
-      <li>Used LSTM for multivariate forecasting.</li>
-      <li>Integrated sentiment analysis using Twitter dataset.</li>
-    </ul>
-    <p><a href="#" target="_blank">GitHub Link (add later)</a></p>
-    <div class="chips"><span>Python</span><span>LSTM</span><span>Sentiment</span><span>Forecasting</span></div>
-  </div>
+  </section>
 
-  <div class="project">
-    <h3>🛒 Retail Sales Forecasting</h3>
-    <ul>
-      <li>Forecasted store sales using ARIMA & Random Forest.</li>
-      <li>Created seasonality, holiday & promotions features.</li>
-    </ul>
-    <p><a href="#" target="_blank">GitHub Link (add later)</a></p>
-    <div class="chips"><span>Time Series</span><span>Python</span></div>
-  </div>
+  <!-- SKILLS -->
+  <section id="skills">
+    <h2>Skills</h2>
+    <p><strong>Languages:</strong> SQL, Python</p>
+    <p><strong>ML & Data:</strong> Pandas, NumPy, scikit-learn, LSTM models</p>
+    <p><strong>BI Tools:</strong> Power BI, Excel</p>
+    <p><strong>Other:</strong> Git, GitHub, Jupyter Notebook</p>
+  </section>
 
-</section>
+  <!-- CONTACT -->
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:youremail@email.com">youremail@email.com</a></p>
+    <p>LinkedIn: <a href="https://linkedin.com/in/YOUR-LINK" target="_blank">linkedin.com/in/YOUR-LINK</a></p>
+    <p>GitHub: <a href="https://github.com/ArhamRKhan" target="_blank">github.com/ArhamRKhan</a></p>
+  </section>
 
-<section id="skills">
-  <h2>Skills</h2>
-  <p><strong>Languages:</strong> SQL, Python</p>
-  <p><strong>Libraries:</strong> Pandas, NumPy, scikit-learn</p>
-  <p><strong>BI Tools:</strong> Power BI, Excel</p>
-  <p><strong>Other:</strong> Jupyter, Git, GitHub</p>
-</section>
+</div>
 
-<section id="contact">
-  <h2>Contact</h2>
-  <p>Email: <a href="mailto:youremail@email.com">youremail@email.com</a></p>
-  <p>LinkedIn: <a href="https://linkedin.com/in/USERNAME" target="_blank">linkedin.com/in/USERNAME</a></p>
-  <p>GitHub: <a href="https://github.com/ArhamRKhan" target="_blank">github.com/ArhamRKhan</a></p>
-</section>
+<footer>
+  © <span id="year"></span> Arham Khan
+</footer>
 
-</main>
-
-<footer>© <span id="year"></span> Arham Khan</footer>
-<script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+<script>
+  document.getElementById("year").innerText = new Date().getFullYear();
+</script>
 
 </body>
 </html>
